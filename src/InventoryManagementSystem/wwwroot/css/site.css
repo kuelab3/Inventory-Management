@@ -1,0 +1,27 @@
+body {
+    background: #f7f8fb;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    border-radius: 18px;
+}
+
+.stat-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.06);
+}
+
+.stat-label {
+    font-size: 0.88rem;
+    color: #64748b;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+}

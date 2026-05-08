@@ -1,0 +1,148 @@
+@model DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<div class="row g-4">
+    <div class="col-lg-8">
+        <div class="card p-4 mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <h1 class="h3 mb-1">Dashboard</h1>
+                    <p class="text-muted mb-0">Products, suppliers, transactions, and event activity.</p>
+                </div>
+                <form asp-action="ScanLowStock" method="post">
+                    @Html.AntiForgeryToken()
+                    <button class="btn btn-primary">Scan Low Stock</button>
+                </form>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-label">Products</div>
+                        <div class="stat-value">@Model.Products.Count</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-label">Suppliers</div>
+                        <div class="stat-value">@Model.Suppliers.Count</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-label">Low stock</div>
+                        <div class="stat-value">@Model.LowStockProducts.Count</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-4 mb-4">
+            <h2 class="h5">Low stock products</h2>
+            <div class="table-responsive">
+                <table class="table table-sm align-middle">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Stock</th>
+                            <th>Threshold</th>
+                            <th>Supplier</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model.LowStockProducts)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.StockLevel</td>
+                            <td>@item.ReorderThreshold</td>
+                            <td>#@item.SupplierId</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card p-4 mb-4">
+            <h2 class="h5">Recent stock transactions</h2>
+            <div class="table-responsive">
+                <table class="table table-sm align-middle">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Product</th>
+                            <th>Type</th>
+                            <th>Qty</th>
+                            <th>By</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var tx in Model.RecentTransactions)
+                    {
+                        <tr>
+                            <td>@tx.CreatedAt.ToLocalTime().ToString("g")</td>
+                            <td>@tx.ProductName</td>
+                            <td>@tx.Type</td>
+                            <td>@tx.Quantity</td>
+                            <td>@tx.PerformedBy</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card p-4">
+            <h2 class="h5">Recent supplier orders</h2>
+            <div class="table-responsive">
+                <table class="table table-sm align-middle">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Supplier</th>
+                            <th>Product</th>
+                            <th>Qty</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var order in Model.RecentOrders)
+                    {
+                        <tr>
+                            <td>@order.CreatedAt.ToLocalTime().ToString("g")</td>
+                            <td>@order.SupplierName</td>
+                            <td>@order.ProductName</td>
+                            <td>@order.QuantityOrdered</td>
+                            <td>@order.Status</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card p-4 mb-4">
+            <h2 class="h5">Notifications</h2>
+            <ul class="list-group list-group-flush">
+            @foreach (var note in Model.NotificationEntries.Take(8))
+            {
+                <li class="list-group-item small">@note</li>
+            }
+            </ul>
+        </div>
+
+        <div class="card p-4">
+            <h2 class="h5">Audit log</h2>
+            <ul class="list-group list-group-flush">
+            @foreach (var log in Model.AuditEntries.Take(8))
+            {
+                <li class="list-group-item small">@log</li>
+            }
+            </ul>
+        </div>
+    </div>
+</div>

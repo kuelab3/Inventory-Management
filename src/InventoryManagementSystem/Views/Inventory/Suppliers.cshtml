@@ -1,0 +1,30 @@
+@model IReadOnlyList<Supplier>
+@{
+    ViewData["Title"] = "Suppliers";
+}
+<div class="card p-4">
+    <h1 class="h3 mb-3">Suppliers</h1>
+    <div class="table-responsive">
+        <table class="table table-striped align-middle">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var s in Model)
+            {
+                <tr>
+                    <td>@s.Id</td>
+                    <td>@s.Name</td>
+                    <td>@s.Email</td>
+                    <td>@s.Phone</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

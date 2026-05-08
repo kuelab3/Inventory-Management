@@ -1,0 +1,36 @@
+@model IReadOnlyList<Product>
+@{
+    ViewData["Title"] = "Products";
+}
+<div class="card p-4">
+    <h1 class="h3 mb-3">Products</h1>
+    <div class="table-responsive">
+        <table class="table table-striped align-middle">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>SKU</th>
+                    <th>Stock</th>
+                    <th>Threshold</th>
+                    <th>Supplier</th>
+                    <th>Unit Price</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.Id</td>
+                    <td>@p.Name</td>
+                    <td>@p.Sku</td>
+                    <td>@p.StockLevel</td>
+                    <td>@p.ReorderThreshold</td>
+                    <td>#@p.SupplierId</td>
+                    <td>@p.UnitPrice.ToString("N2")</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
