@@ -6,8 +6,7 @@ This project implements the **Inventory Management** option from the assignment 
 
 - Project title: Inventory Management System
 # Group members:
-**1. Ermiyas Befikadu............Df/Ur/38353/16**
-
+**1. Ermiyas Befikadu............Df/Ur/38353/16** 
 **2. Selam  Ejigu............ Ugr/35152/16**                                               
 **3.  Selam  Tadele............ Ugr/35153/16**                                              
 **4. Selamawit Tadesse............ Ugr/35154/16**                                
