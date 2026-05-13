@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JIxgHMGSNbI=",
+  "dgSpecHash": "qeAOr39vmlw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\Documents\\IMS 03 G\\inventory_management_system_solution\\src\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.26\\microsoft.windowsdesktop.app.ref.8.0.26.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.26\\microsoft.netcore.app.ref.8.0.26.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.26\\microsoft.aspnetcore.app.ref.8.0.26.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.26\\microsoft.netcore.app.host.win-x64.8.0.26.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\Dell\\Documents\\Projects\\Event Driven c#\\IMS 04 G-to be updated\\inventory_management_system_solution\\src\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

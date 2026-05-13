@@ -1,11 +1,13 @@
 @model DashboardViewModel
 @{
-    ViewData["Title"] = "Events";
+    ViewData["Title"] = "Event History";
 }
 <div class="row g-4">
     <div class="col-lg-6">
         <div class="card p-4">
-            <h1 class="h4">Notification stream</h1>
+            <h1 class="h4">Event history</h1>
+            <p class="text-muted">All published event activity is recorded as notifications and audit log entries.</p>
+            <h2 class="h5 mt-4">Notification stream</h2>
             <ul class="list-group list-group-flush">
             @foreach (var note in Model.NotificationEntries)
             {

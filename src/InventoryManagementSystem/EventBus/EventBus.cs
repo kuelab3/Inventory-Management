@@ -24,7 +24,20 @@ public sealed class EventBus : IEventBus
             return;
         }
 
-        var tasks = handlers.Select(handler => handler.HandleAsync(@event, cancellationToken));
+        _logger.LogInformation("Publishing event {EventType} to {HandlerCount} handler(s)", typeof(TEvent).Name, handlers.Count);
+
+        var tasks = handlers.Select(async handler =>
+        {
+            try
+            {
+                await handler.HandleAsync(@event, cancellationToken);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Handler {HandlerType} failed while processing event {EventType}", handler.GetType().Name, typeof(TEvent).Name);
+            }
+        });
+
         await Task.WhenAll(tasks);
     }
 }

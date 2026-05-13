@@ -1,0 +1,58 @@
+@model IReadOnlyList<Product>
+@{
+    ViewData["Title"] = "Remove Stock";
+}
+<div class="row g-4">
+    <div class="col-lg-5">
+        <div class="card p-4">
+            <h1 class="h4 mb-3">Remove stock</h1>
+            <form asp-action="Remove" method="post" class="vstack gap-3">
+                @Html.AntiForgeryToken()
+                <div>
+                    <label class="form-label">Product</label>
+                    <select class="form-select" name="productId" required>
+                        @foreach (var p in Model)
+                        {
+                            <option value="@p.Id">@p.Name (Current: @p.StockLevel)</option>
+                        }
+                    </select>
+                </div>
+                <div>
+                    <label class="form-label">Quantity</label>
+                    <input class="form-control" type="number" min="1" name="quantity" value="1" required />
+                </div>
+                <div>
+                    <label class="form-label">Removed by</label>
+                    <input class="form-control" type="text" name="removedBy" value="Stock Manager" required />
+                </div>
+                <button class="btn btn-danger">Submit removal</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-7">
+        <div class="card p-4">
+            <h2 class="h5">Products available for removal</h2>
+            <div class="table-responsive">
+                <table class="table table-sm align-middle">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Stock</th>
+                            <th>Threshold</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var p in Model)
+                    {
+                        <tr>
+                            <td>@p.Name</td>
+                            <td>@p.StockLevel</td>
+                            <td>@p.ReorderThreshold</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

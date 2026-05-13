@@ -34,6 +34,13 @@ public sealed class InventoryController : Controller
     }
 
     [HttpGet]
+    public async Task<IActionResult> Orders()
+    {
+        var orders = await _inventoryService.GetOrdersAsync();
+        return View(orders);
+    }
+
+    [HttpGet]
     public async Task<IActionResult> Events()
     {
         var model = await _inventoryService.GetDashboardAsync();
@@ -61,6 +68,30 @@ public sealed class InventoryController : Controller
         {
             TempData["Message"] = ex.Message;
             return RedirectToAction(nameof(Receive));
+        }
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Remove()
+    {
+        var model = await _inventoryService.GetProductsAsync();
+        return View(model);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Remove(int productId, int quantity, string removedBy)
+    {
+        try
+        {
+            await _inventoryService.RemoveProductAsync(productId, quantity, removedBy);
+            TempData["Message"] = "Stock removed successfully.";
+            return RedirectToAction(nameof(Index));
+        }
+        catch (Exception ex)
+        {
+            TempData["Message"] = ex.Message;
+            return RedirectToAction(nameof(Remove));
         }
     }
 

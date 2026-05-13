@@ -10,17 +10,20 @@ public sealed class InventoryService : IInventoryService
     private readonly IEventBus _eventBus;
     private readonly IAuditLogService _auditLogService;
     private readonly INotificationService _notificationService;
+    private readonly ILogger<InventoryService> _logger;
 
     public InventoryService(
         IInventoryRepository repository,
         IEventBus eventBus,
         IAuditLogService auditLogService,
-        INotificationService notificationService)
+        INotificationService notificationService,
+        ILogger<InventoryService> logger)
     {
         _repository = repository;
         _eventBus = eventBus;
         _auditLogService = auditLogService;
         _notificationService = notificationService;
+        _logger = logger;
     }
 
     public async Task<DashboardViewModel> GetDashboardAsync()
@@ -76,13 +79,50 @@ public sealed class InventoryService : IInventoryService
             receivedBy,
             DateTime.UtcNow);
 
+        _logger.LogInformation("Publishing ProductReceivedEvent for product {ProductId} ({ProductName})", product.Id, product.Name);
         await _eventBus.PublishAsync(receivedEvent, cancellationToken);
+    }
+
+    public async Task RemoveProductAsync(int productId, int quantity, string removedBy, CancellationToken cancellationToken = default)
+    {
+        if (quantity <= 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(quantity), "Quantity must be greater than zero.");
+        }
+
+        var product = await _repository.GetProductByIdAsync(productId);
+        if (product is null)
+        {
+            throw new InvalidOperationException("Product not found.");
+        }
+
+        if (product.StockLevel < quantity)
+        {
+            throw new InvalidOperationException($"Insufficient stock. Available: {product.StockLevel}, Requested: {quantity}");
+        }
+
+        product.StockLevel -= quantity;
+        await _repository.UpdateProductAsync(product);
+
+        await _repository.AddTransactionAsync(new StockTransaction
+        {
+            ProductId = product.Id,
+            ProductName = product.Name,
+            Quantity = quantity,
+            Type = "Removed",
+            PerformedBy = removedBy,
+            CreatedAt = DateTime.UtcNow
+        });
+
+        _logger.LogInformation("Product removed: {ProductId} ({ProductName}) - Quantity: {Quantity}, New stock level: {NewStockLevel}", product.Id, product.Name, quantity, product.StockLevel);
     }
 
     public async Task ScanLowStockAsync(CancellationToken cancellationToken = default)
     {
         var products = await _repository.GetProductsAsync();
         var lowStockProducts = products.Where(p => p.StockLevel <= p.ReorderThreshold).ToList();
+
+        _logger.LogInformation("Scanning for low stock products. Found {LowStockCount} low-stock items.", lowStockProducts.Count);
 
         foreach (var product in lowStockProducts)
         {

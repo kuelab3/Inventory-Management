@@ -1,0 +1,36 @@
+@model IReadOnlyList<InventoryManagementSystem.Models.SupplierOrder>
+@{
+    ViewData["Title"] = "Supplier Orders";
+}
+<div class="card p-4">
+    <h1 class="h3 mb-3">Supplier Orders</h1>
+    <div class="table-responsive">
+        <table class="table table-striped align-middle">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Created</th>
+                    <th>Supplier</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Status</th>
+                    <th>Reason</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.CreatedAt.ToLocalTime().ToString("g")</td>
+                    <td>@order.SupplierName</td>
+                    <td>@order.ProductName</td>
+                    <td>@order.QuantityOrdered</td>
+                    <td>@order.Status</td>
+                    <td>@order.Reason</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

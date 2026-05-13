@@ -1,0 +1,283 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Office Chair",
+      "sku": "CHA-1001",
+      "supplierId": 1,
+      "stockLevel": 1,
+      "reorderThreshold": 8,
+      "unitPrice": 1450
+    },
+    {
+      "id": 2,
+      "name": "Printer Paper (A4)",
+      "sku": "PPR-2001",
+      "supplierId": 2,
+      "stockLevel": 2,
+      "reorderThreshold": 15,
+      "unitPrice": 320
+    },
+    {
+      "id": 3,
+      "name": "Laptop Stand",
+      "sku": "LST-3001",
+      "supplierId": 1,
+      "stockLevel": 20,
+      "reorderThreshold": 6,
+      "unitPrice": 890
+    },
+    {
+      "id": 4,
+      "name": "Wireless Mouse",
+      "sku": "MSE-4001",
+      "supplierId": 3,
+      "stockLevel": 20,
+      "reorderThreshold": 10,
+      "unitPrice": 650
+    }
+  ],
+  "suppliers": [
+    {
+      "id": 1,
+      "name": "Addis Office Supply",
+      "email": "orders@addisoffice.example",
+      "phone": "\u002B251-111-111-111"
+    },
+    {
+      "id": 2,
+      "name": "Blue Nile Paper",
+      "email": "sales@bluenilepaper.example",
+      "phone": "\u002B251-222-222-222"
+    },
+    {
+      "id": 3,
+      "name": "TekTech Importers",
+      "email": "hello@tektech.example",
+      "phone": "\u002B251-333-333-333"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "productId": 3,
+      "productName": "Laptop Stand",
+      "quantity": 17,
+      "type": "Received",
+      "performedBy": "Store Clerk",
+      "createdAt": "2026-05-13T11:10:09.7335472Z"
+    },
+    {
+      "id": 2,
+      "productId": 1,
+      "productName": "Office Chair",
+      "quantity": 76,
+      "type": "Received",
+      "performedBy": "Store Clerk",
+      "createdAt": "2026-05-13T11:30:05.826852Z"
+    },
+    {
+      "id": 3,
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantity": 19,
+      "type": "Received",
+      "performedBy": "Store Clerk",
+      "createdAt": "2026-05-13T11:30:30.2294849Z"
+    },
+    {
+      "id": 4,
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantity": 17,
+      "type": "Received",
+      "performedBy": "Store Clerk",
+      "createdAt": "2026-05-13T11:35:01.0455469Z"
+    },
+    {
+      "id": 5,
+      "productId": 1,
+      "productName": "Office Chair",
+      "quantity": 1,
+      "type": "Received",
+      "performedBy": "Store Clerk",
+      "createdAt": "2026-05-13T11:40:32.8646359Z"
+    },
+    {
+      "id": 6,
+      "productId": 1,
+      "productName": "Office Chair",
+      "quantity": 88,
+      "type": "Removed",
+      "performedBy": "Stock Manager",
+      "createdAt": "2026-05-13T11:49:32.1899299Z"
+    },
+    {
+      "id": 7,
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantity": 39,
+      "type": "Removed",
+      "performedBy": "Stock Manager",
+      "createdAt": "2026-05-13T11:50:25.6272867Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "supplierId": 2,
+      "supplierName": "Blue Nile Paper",
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantityOrdered": 30,
+      "reason": "Auto reorder triggered because stock reached 5",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:10:12.6419458Z"
+    },
+    {
+      "id": 2,
+      "supplierId": 2,
+      "supplierName": "Blue Nile Paper",
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantityOrdered": 30,
+      "reason": "Auto reorder triggered because stock reached 5",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:10:15.7021115Z"
+    },
+    {
+      "id": 3,
+      "supplierId": 2,
+      "supplierName": "Blue Nile Paper",
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantityOrdered": 30,
+      "reason": "Auto reorder triggered because stock reached 5",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:10:17.6453719Z"
+    },
+    {
+      "id": 4,
+      "supplierId": 2,
+      "supplierName": "Blue Nile Paper",
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantityOrdered": 30,
+      "reason": "Auto reorder triggered because stock reached 5",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:10:18.3928966Z"
+    },
+    {
+      "id": 5,
+      "supplierId": 2,
+      "supplierName": "Blue Nile Paper",
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantityOrdered": 30,
+      "reason": "Auto reorder triggered because stock reached 5",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:10:19.3303032Z"
+    },
+    {
+      "id": 6,
+      "supplierId": 2,
+      "supplierName": "Blue Nile Paper",
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantityOrdered": 30,
+      "reason": "Auto reorder triggered because stock reached 5",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:10:19.9870885Z"
+    },
+    {
+      "id": 7,
+      "supplierId": 2,
+      "supplierName": "Blue Nile Paper",
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantityOrdered": 30,
+      "reason": "Auto reorder triggered because stock reached 5",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:10:20.6839647Z"
+    },
+    {
+      "id": 8,
+      "supplierId": 2,
+      "supplierName": "Blue Nile Paper",
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantityOrdered": 30,
+      "reason": "Auto reorder triggered because stock reached 5",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:10:21.1058663Z"
+    },
+    {
+      "id": 9,
+      "supplierId": 2,
+      "supplierName": "Blue Nile Paper",
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantityOrdered": 30,
+      "reason": "Auto reorder triggered because stock reached 5",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:10:22.3371379Z"
+    },
+    {
+      "id": 10,
+      "supplierId": 2,
+      "supplierName": "Blue Nile Paper",
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantityOrdered": 30,
+      "reason": "Auto reorder triggered because stock reached 5",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:11:07.2772804Z"
+    },
+    {
+      "id": 11,
+      "supplierId": 2,
+      "supplierName": "Blue Nile Paper",
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantityOrdered": 30,
+      "reason": "Auto reorder triggered because stock reached 5",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:11:12.7864009Z"
+    },
+    {
+      "id": 12,
+      "supplierId": 2,
+      "supplierName": "Blue Nile Paper",
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantityOrdered": 30,
+      "reason": "Auto reorder triggered because stock reached 5",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:11:13.6841387Z"
+    },
+    {
+      "id": 13,
+      "supplierId": 2,
+      "supplierName": "Blue Nile Paper",
+      "productId": 2,
+      "productName": "Printer Paper (A4)",
+      "quantityOrdered": 30,
+      "reason": "Auto reorder triggered because stock reached 5",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:11:14.2844305Z"
+    },
+    {
+      "id": 14,
+      "supplierId": 1,
+      "supplierName": "Addis Office Supply",
+      "productId": 1,
+      "productName": "Office Chair",
+      "quantityOrdered": 16,
+      "reason": "Auto reorder triggered because stock reached 1",
+      "status": "Placed",
+      "createdAt": "2026-05-13T11:50:09.2847266Z"
+    }
+  ],
+  "transactionId": 8,
+  "orderId": 15
+}

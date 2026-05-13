@@ -13,4 +13,5 @@ public interface IInventoryRepository
     Task AddTransactionAsync(StockTransaction transaction);
     Task AddOrderAsync(SupplierOrder order);
     Task UpdateProductAsync(Product product);
+    Task<SupplierOrder?> GetPendingOrderByProductIdAsync(int productId);
 }

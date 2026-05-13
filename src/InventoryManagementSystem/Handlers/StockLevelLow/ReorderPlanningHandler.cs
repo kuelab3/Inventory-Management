@@ -24,6 +24,13 @@ public sealed class ReorderPlanningHandler : IEventHandler<StockLevelLowEvent>
             return;
         }
 
+        // Check if there's already a pending order for this product
+        var existingOrder = await _repository.GetPendingOrderByProductIdAsync(@event.ProductId);
+        if (existingOrder is not null)
+        {
+            return; // Skip creating a new order if one already exists
+        }
+
         var supplier = await _repository.GetSupplierByIdAsync(product.SupplierId);
         if (supplier is null)
         {

@@ -11,53 +11,61 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = InventoryManagementSystem
 build_property.RootNamespace = InventoryManagementSystem
-build_property.ProjectDir = C:\Users\Dell\Documents\IMS 03 G\inventory_management_system_solution\src\InventoryManagementSystem\
+build_property.ProjectDir = C:\Users\Dell\Documents\Projects\Event Driven c#\IMS 04 G-to be updated\inventory_management_system_solution\src\InventoryManagementSystem\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Dell\Documents\IMS 03 G\inventory_management_system_solution\src\InventoryManagementSystem
+build_property.MSBuildProjectDirectory = C:\Users\Dell\Documents\Projects\Event Driven c#\IMS 04 G-to be updated\inventory_management_system_solution\src\InventoryManagementSystem
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Dell/Documents/IMS 03 G/inventory_management_system_solution/src/InventoryManagementSystem/Views/Home/Error.cshtml]
+[C:/Users/Dell/Documents/Projects/Event Driven c\#/IMS 04 G-to be updated/inventory_management_system_solution/src/InventoryManagementSystem/Views/Home/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dell/Documents/IMS 03 G/inventory_management_system_solution/src/InventoryManagementSystem/Views/Home/Index.cshtml]
+[C:/Users/Dell/Documents/Projects/Event Driven c\#/IMS 04 G-to be updated/inventory_management_system_solution/src/InventoryManagementSystem/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dell/Documents/IMS 03 G/inventory_management_system_solution/src/InventoryManagementSystem/Views/Inventory/Events.cshtml]
+[C:/Users/Dell/Documents/Projects/Event Driven c\#/IMS 04 G-to be updated/inventory_management_system_solution/src/InventoryManagementSystem/Views/Inventory/Events.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XEV2ZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dell/Documents/IMS 03 G/inventory_management_system_solution/src/InventoryManagementSystem/Views/Inventory/Index.cshtml]
+[C:/Users/Dell/Documents/Projects/Event Driven c\#/IMS 04 G-to be updated/inventory_management_system_solution/src/InventoryManagementSystem/Views/Inventory/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dell/Documents/IMS 03 G/inventory_management_system_solution/src/InventoryManagementSystem/Views/Inventory/Products.cshtml]
+[C:/Users/Dell/Documents/Projects/Event Driven c\#/IMS 04 G-to be updated/inventory_management_system_solution/src/InventoryManagementSystem/Views/Inventory/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XE9yZGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Documents/Projects/Event Driven c\#/IMS 04 G-to be updated/inventory_management_system_solution/src/InventoryManagementSystem/Views/Inventory/Products.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XFByb2R1Y3RzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dell/Documents/IMS 03 G/inventory_management_system_solution/src/InventoryManagementSystem/Views/Inventory/Receive.cshtml]
+[C:/Users/Dell/Documents/Projects/Event Driven c\#/IMS 04 G-to be updated/inventory_management_system_solution/src/InventoryManagementSystem/Views/Inventory/Receive.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XFJlY2VpdmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dell/Documents/IMS 03 G/inventory_management_system_solution/src/InventoryManagementSystem/Views/Inventory/Suppliers.cshtml]
+[C:/Users/Dell/Documents/Projects/Event Driven c\#/IMS 04 G-to be updated/inventory_management_system_solution/src/InventoryManagementSystem/Views/Inventory/Remove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XFJlbW92ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Documents/Projects/Event Driven c\#/IMS 04 G-to be updated/inventory_management_system_solution/src/InventoryManagementSystem/Views/Inventory/Suppliers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XFN1cHBsaWVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dell/Documents/IMS 03 G/inventory_management_system_solution/src/InventoryManagementSystem/Views/Shared/_Layout.cshtml]
+[C:/Users/Dell/Documents/Projects/Event Driven c\#/IMS 04 G-to be updated/inventory_management_system_solution/src/InventoryManagementSystem/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dell/Documents/IMS 03 G/inventory_management_system_solution/src/InventoryManagementSystem/Views/_ViewImports.cshtml]
+[C:/Users/Dell/Documents/Projects/Event Driven c\#/IMS 04 G-to be updated/inventory_management_system_solution/src/InventoryManagementSystem/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dell/Documents/IMS 03 G/inventory_management_system_solution/src/InventoryManagementSystem/Views/_ViewStart.cshtml]
+[C:/Users/Dell/Documents/Projects/Event Driven c\#/IMS 04 G-to be updated/inventory_management_system_solution/src/InventoryManagementSystem/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

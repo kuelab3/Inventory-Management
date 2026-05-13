@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\Documents\\IMS 03 G\\inventory_management_system_solution\\src\\InventoryManagementSystem\\InventoryManagementSystem.csproj": {}
+    "C:\\Users\\Dell\\Documents\\Projects\\Event Driven c#\\IMS 04 G-to be updated\\inventory_management_system_solution\\src\\InventoryManagementSystem\\InventoryManagementSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\Documents\\IMS 03 G\\inventory_management_system_solution\\src\\InventoryManagementSystem\\InventoryManagementSystem.csproj": {
+    "C:\\Users\\Dell\\Documents\\Projects\\Event Driven c#\\IMS 04 G-to be updated\\inventory_management_system_solution\\src\\InventoryManagementSystem\\InventoryManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\Documents\\IMS 03 G\\inventory_management_system_solution\\src\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Documents\\Projects\\Event Driven c#\\IMS 04 G-to be updated\\inventory_management_system_solution\\src\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
         "projectName": "InventoryManagementSystem",
-        "projectPath": "C:\\Users\\Dell\\Documents\\IMS 03 G\\inventory_management_system_solution\\src\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+        "projectPath": "C:\\Users\\Dell\\Documents\\Projects\\Event Driven c#\\IMS 04 G-to be updated\\inventory_management_system_solution\\src\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\Documents\\IMS 03 G\\inventory_management_system_solution\\src\\InventoryManagementSystem\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\Documents\\Projects\\Event Driven c#\\IMS 04 G-to be updated\\inventory_management_system_solution\\src\\InventoryManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -62,24 +62,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.26, 8.0.26]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

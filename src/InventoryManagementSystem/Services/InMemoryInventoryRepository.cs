@@ -62,4 +62,10 @@ public sealed class InMemoryInventoryRepository : IInventoryRepository
         current.StockLevel = product.StockLevel;
         return Task.CompletedTask;
     }
+
+    public Task<SupplierOrder?> GetPendingOrderByProductIdAsync(int productId)
+    {
+        var pendingOrder = _orders.FirstOrDefault(o => o.ProductId == productId && o.Status == "Placed");
+        return Task.FromResult<SupplierOrder?>(pendingOrder);
+    }
 }

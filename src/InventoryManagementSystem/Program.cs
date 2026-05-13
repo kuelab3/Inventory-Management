@@ -1,3 +1,4 @@
+using System.IO;
 using InventoryManagementSystem.EventBus;
 using InventoryManagementSystem.Handlers.ProductReceived;
 using InventoryManagementSystem.Handlers.StockLevelLow;
@@ -9,7 +10,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IEventBus, EventBus>();
-builder.Services.AddSingleton<IInventoryRepository, InMemoryInventoryRepository>();
+builder.Services.AddSingleton<IInventoryRepository>(sp =>
+{
+    var environment = sp.GetRequiredService<IWebHostEnvironment>();
+    var dataPath = Path.Combine(environment.ContentRootPath, "Data", "inventory-data.json");
+    return new FileInventoryRepository(dataPath);
+});
 builder.Services.AddSingleton<IAuditLogService, AuditLogService>();
 builder.Services.AddSingleton<INotificationService, NotificationService>();
 builder.Services.AddScoped<IInventoryService, InventoryService>();
