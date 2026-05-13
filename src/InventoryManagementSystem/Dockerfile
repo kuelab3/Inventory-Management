@@ -7,7 +7,7 @@ WORKDIR /src
 
 COPY . .
 
-RUN dotnet publish "InventoryManagementSystem.csproj" -c Release -o /app/publish
+RUN dotnet publish "./InventoryManagementSystem.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
